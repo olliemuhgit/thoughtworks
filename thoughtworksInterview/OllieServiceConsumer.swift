@@ -10,5 +10,6 @@ import UIKit
 import Alamofire
 
 class OllieServiceConsumer: NSObject {
-
+    
+    
 }
