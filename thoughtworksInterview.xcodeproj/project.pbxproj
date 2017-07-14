@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		072884851F194F7E0052994A /* OllieServiceConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072884841F194F7E0052994A /* OllieServiceConsumer.swift */; };
+		072884871F1950810052994A /* OllieServiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072884861F1950810052994A /* OllieServiceConstants.swift */; };
+		072884891F1951980052994A /* OllieDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072884881F1951980052994A /* OllieDataProvider.swift */; };
+		0728848B1F1951FA0052994A /* OlleRootCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728848A1F1951FA0052994A /* OlleRootCollectionViewController.swift */; };
+		0728848D1F19521E0052994A /* OllieCategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728848C1F19521E0052994A /* OllieCategoryCollectionViewController.swift */; };
+		0728848F1F1952510052994A /* OllieSongListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728848E1F1952510052994A /* OllieSongListTableViewController.swift */; };
+		072884911F1952640052994A /* OllieSongDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072884901F1952640052994A /* OllieSongDetailViewController.swift */; };
 		0743635C1F149A0900F6F6CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743635B1F149A0900F6F6CB /* AppDelegate.swift */; };
 		0743635F1F149A0900F6F6CB /* thoughtworksInterview.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0743635D1F149A0900F6F6CB /* thoughtworksInterview.xcdatamodeld */; };
 		074363611F149A0900F6F6CB /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074363601F149A0900F6F6CB /* MasterViewController.swift */; };
@@ -16,6 +23,10 @@
 		0743636B1F149A0900F6F6CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 074363691F149A0900F6F6CB /* LaunchScreen.storyboard */; };
 		074363761F149A0900F6F6CB /* thoughtworksInterviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074363751F149A0900F6F6CB /* thoughtworksInterviewTests.swift */; };
 		074363811F149A0900F6F6CB /* thoughtworksInterviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074363801F149A0900F6F6CB /* thoughtworksInterviewUITests.swift */; };
+		07A9D4CF1F194AAC008F15B5 /* DataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A9D4CE1F194AAC008F15B5 /* DataProviderTests.swift */; };
+		23E1BCBE29F00FD113AB74AD /* Pods_thoughtworksInterview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96A09798EB3C11657E0A396 /* Pods_thoughtworksInterview.framework */; };
+		2A61B7BD68714B323DB78D55 /* Pods_thoughtworksInterviewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBADFD62B090D22E9520B6E5 /* Pods_thoughtworksInterviewTests.framework */; };
+		D35B645BF2D159E29E28AD3D /* Pods_thoughtworksInterviewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06807E14FBCC5D27DE0FCABA /* Pods_thoughtworksInterviewUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +47,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06807E14FBCC5D27DE0FCABA /* Pods_thoughtworksInterviewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thoughtworksInterviewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		072884841F194F7E0052994A /* OllieServiceConsumer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OllieServiceConsumer.swift; sourceTree = "<group>"; };
+		072884861F1950810052994A /* OllieServiceConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OllieServiceConstants.swift; sourceTree = "<group>"; };
+		072884881F1951980052994A /* OllieDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OllieDataProvider.swift; sourceTree = "<group>"; };
+		0728848A1F1951FA0052994A /* OlleRootCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OlleRootCollectionViewController.swift; sourceTree = "<group>"; };
+		0728848C1F19521E0052994A /* OllieCategoryCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OllieCategoryCollectionViewController.swift; sourceTree = "<group>"; };
+		0728848E1F1952510052994A /* OllieSongListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OllieSongListTableViewController.swift; sourceTree = "<group>"; };
+		072884901F1952640052994A /* OllieSongDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OllieSongDetailViewController.swift; sourceTree = "<group>"; };
 		074363581F149A0900F6F6CB /* thoughtworksInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = thoughtworksInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0743635B1F149A0900F6F6CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0743635E1F149A0900F6F6CB /* thoughtworksInterview.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = thoughtworksInterview.xcdatamodel; sourceTree = "<group>"; };
@@ -51,6 +70,15 @@
 		0743637C1F149A0900F6F6CB /* thoughtworksInterviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = thoughtworksInterviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		074363801F149A0900F6F6CB /* thoughtworksInterviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thoughtworksInterviewUITests.swift; sourceTree = "<group>"; };
 		074363821F149A0900F6F6CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07A9D4CE1F194AAC008F15B5 /* DataProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProviderTests.swift; sourceTree = "<group>"; };
+		412C51930143180A40B219BA /* Pods-thoughtworksInterviewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thoughtworksInterviewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-thoughtworksInterviewTests/Pods-thoughtworksInterviewTests.release.xcconfig"; sourceTree = "<group>"; };
+		4CBA64DFAC4FEC1908098DF5 /* Pods-thoughtworksInterview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thoughtworksInterview.debug.xcconfig"; path = "Pods/Target Support Files/Pods-thoughtworksInterview/Pods-thoughtworksInterview.debug.xcconfig"; sourceTree = "<group>"; };
+		6747AA49F06D7F2EF8627F0F /* Pods-thoughtworksInterviewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thoughtworksInterviewUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-thoughtworksInterviewUITests/Pods-thoughtworksInterviewUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		940FE2A0CE7AF643AFAA8BF7 /* Pods-thoughtworksInterviewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thoughtworksInterviewUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-thoughtworksInterviewUITests/Pods-thoughtworksInterviewUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9C37723CEB0AE2A9F90FA35A /* Pods-thoughtworksInterviewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thoughtworksInterviewTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-thoughtworksInterviewTests/Pods-thoughtworksInterviewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A8B79842DEBDF0E6E5FF610E /* Pods-thoughtworksInterview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thoughtworksInterview.release.xcconfig"; path = "Pods/Target Support Files/Pods-thoughtworksInterview/Pods-thoughtworksInterview.release.xcconfig"; sourceTree = "<group>"; };
+		EBADFD62B090D22E9520B6E5 /* Pods_thoughtworksInterviewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thoughtworksInterviewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F96A09798EB3C11657E0A396 /* Pods_thoughtworksInterview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thoughtworksInterview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23E1BCBE29F00FD113AB74AD /* Pods_thoughtworksInterview.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A61B7BD68714B323DB78D55 /* Pods_thoughtworksInterviewTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +102,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D35B645BF2D159E29E28AD3D /* Pods_thoughtworksInterviewUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		072884831F194C1D0052994A /* Connectivity */ = {
+			isa = PBXGroup;
+			children = (
+				072884841F194F7E0052994A /* OllieServiceConsumer.swift */,
+				072884861F1950810052994A /* OllieServiceConstants.swift */,
+				072884881F1951980052994A /* OllieDataProvider.swift */,
+			);
+			name = Connectivity;
+			sourceTree = "<group>";
+		};
 		0743634F1F149A0800F6F6CB = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +126,8 @@
 				074363741F149A0900F6F6CB /* thoughtworksInterviewTests */,
 				0743637F1F149A0900F6F6CB /* thoughtworksInterviewUITests */,
 				074363591F149A0900F6F6CB /* Products */,
+				703CEADB53437ABB02CEF5D7 /* Pods */,
+				3478C1C59B121F4F6982FF61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +144,7 @@
 		0743635A1F149A0900F6F6CB /* thoughtworksInterview */ = {
 			isa = PBXGroup;
 			children = (
+				072884831F194C1D0052994A /* Connectivity */,
 				0743635B1F149A0900F6F6CB /* AppDelegate.swift */,
 				074363601F149A0900F6F6CB /* MasterViewController.swift */,
 				074363621F149A0900F6F6CB /* DetailViewController.swift */,
@@ -109,6 +153,10 @@
 				074363691F149A0900F6F6CB /* LaunchScreen.storyboard */,
 				0743636C1F149A0900F6F6CB /* Info.plist */,
 				0743635D1F149A0900F6F6CB /* thoughtworksInterview.xcdatamodeld */,
+				0728848A1F1951FA0052994A /* OlleRootCollectionViewController.swift */,
+				0728848C1F19521E0052994A /* OllieCategoryCollectionViewController.swift */,
+				0728848E1F1952510052994A /* OllieSongListTableViewController.swift */,
+				072884901F1952640052994A /* OllieSongDetailViewController.swift */,
 			);
 			path = thoughtworksInterview;
 			sourceTree = "<group>";
@@ -118,6 +166,7 @@
 			children = (
 				074363751F149A0900F6F6CB /* thoughtworksInterviewTests.swift */,
 				074363771F149A0900F6F6CB /* Info.plist */,
+				07A9D4CE1F194AAC008F15B5 /* DataProviderTests.swift */,
 			);
 			path = thoughtworksInterviewTests;
 			sourceTree = "<group>";
@@ -131,6 +180,29 @@
 			path = thoughtworksInterviewUITests;
 			sourceTree = "<group>";
 		};
+		3478C1C59B121F4F6982FF61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F96A09798EB3C11657E0A396 /* Pods_thoughtworksInterview.framework */,
+				EBADFD62B090D22E9520B6E5 /* Pods_thoughtworksInterviewTests.framework */,
+				06807E14FBCC5D27DE0FCABA /* Pods_thoughtworksInterviewUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		703CEADB53437ABB02CEF5D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4CBA64DFAC4FEC1908098DF5 /* Pods-thoughtworksInterview.debug.xcconfig */,
+				A8B79842DEBDF0E6E5FF610E /* Pods-thoughtworksInterview.release.xcconfig */,
+				9C37723CEB0AE2A9F90FA35A /* Pods-thoughtworksInterviewTests.debug.xcconfig */,
+				412C51930143180A40B219BA /* Pods-thoughtworksInterviewTests.release.xcconfig */,
+				6747AA49F06D7F2EF8627F0F /* Pods-thoughtworksInterviewUITests.debug.xcconfig */,
+				940FE2A0CE7AF643AFAA8BF7 /* Pods-thoughtworksInterviewUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +210,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 074363851F149A0900F6F6CB /* Build configuration list for PBXNativeTarget "thoughtworksInterview" */;
 			buildPhases = (
+				20F9ED911BFD2195211DEB15 /* [CP] Check Pods Manifest.lock */,
 				074363541F149A0900F6F6CB /* Sources */,
 				074363551F149A0900F6F6CB /* Frameworks */,
 				074363561F149A0900F6F6CB /* Resources */,
+				6E84743EB62E9EDB9362170B /* [CP] Embed Pods Frameworks */,
+				DCB5FF51132B294B1DCFB295 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,9 +230,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 074363881F149A0900F6F6CB /* Build configuration list for PBXNativeTarget "thoughtworksInterviewTests" */;
 			buildPhases = (
+				CFE22D4580D9D6D5F00A7BBE /* [CP] Check Pods Manifest.lock */,
 				0743636D1F149A0900F6F6CB /* Sources */,
 				0743636E1F149A0900F6F6CB /* Frameworks */,
 				0743636F1F149A0900F6F6CB /* Resources */,
+				FA41406D48D4CBCA416C83D5 /* [CP] Embed Pods Frameworks */,
+				9B85A8C12F33367BEDAA64D9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,9 +251,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0743638B1F149A0900F6F6CB /* Build configuration list for PBXNativeTarget "thoughtworksInterviewUITests" */;
 			buildPhases = (
+				37E673894D52F202D59F539B /* [CP] Check Pods Manifest.lock */,
 				074363781F149A0900F6F6CB /* Sources */,
 				074363791F149A0900F6F6CB /* Frameworks */,
 				0743637A1F149A0900F6F6CB /* Resources */,
+				6438CEBE339C154E689AEC45 /* [CP] Embed Pods Frameworks */,
+				82842F8D5272A853E4354C3C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,15 +341,160 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		20F9ED911BFD2195211DEB15 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		37E673894D52F202D59F539B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6438CEBE339C154E689AEC45 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-thoughtworksInterviewUITests/Pods-thoughtworksInterviewUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E84743EB62E9EDB9362170B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-thoughtworksInterview/Pods-thoughtworksInterview-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82842F8D5272A853E4354C3C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-thoughtworksInterviewUITests/Pods-thoughtworksInterviewUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B85A8C12F33367BEDAA64D9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-thoughtworksInterviewTests/Pods-thoughtworksInterviewTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFE22D4580D9D6D5F00A7BBE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DCB5FF51132B294B1DCFB295 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-thoughtworksInterview/Pods-thoughtworksInterview-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA41406D48D4CBCA416C83D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-thoughtworksInterviewTests/Pods-thoughtworksInterviewTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		074363541F149A0900F6F6CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0743635F1F149A0900F6F6CB /* thoughtworksInterview.xcdatamodeld in Sources */,
+				072884911F1952640052994A /* OllieSongDetailViewController.swift in Sources */,
 				0743635C1F149A0900F6F6CB /* AppDelegate.swift in Sources */,
 				074363611F149A0900F6F6CB /* MasterViewController.swift in Sources */,
 				074363631F149A0900F6F6CB /* DetailViewController.swift in Sources */,
+				0728848B1F1951FA0052994A /* OlleRootCollectionViewController.swift in Sources */,
+				0728848D1F19521E0052994A /* OllieCategoryCollectionViewController.swift in Sources */,
+				072884851F194F7E0052994A /* OllieServiceConsumer.swift in Sources */,
+				072884891F1951980052994A /* OllieDataProvider.swift in Sources */,
+				0728848F1F1952510052994A /* OllieSongListTableViewController.swift in Sources */,
+				072884871F1950810052994A /* OllieServiceConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07A9D4CF1F194AAC008F15B5 /* DataProviderTests.swift in Sources */,
 				074363761F149A0900F6F6CB /* thoughtworksInterviewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +645,7 @@
 		};
 		074363861F149A0900F6F6CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CBA64DFAC4FEC1908098DF5 /* Pods-thoughtworksInterview.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = thoughtworksInterview/Info.plist;
@@ -430,6 +658,7 @@
 		};
 		074363871F149A0900F6F6CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8B79842DEBDF0E6E5FF610E /* Pods-thoughtworksInterview.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = thoughtworksInterview/Info.plist;
@@ -442,6 +671,7 @@
 		};
 		074363891F149A0900F6F6CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C37723CEB0AE2A9F90FA35A /* Pods-thoughtworksInterviewTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -456,6 +686,7 @@
 		};
 		0743638A1F149A0900F6F6CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 412C51930143180A40B219BA /* Pods-thoughtworksInterviewTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -470,6 +701,7 @@
 		};
 		0743638C1F149A0900F6F6CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6747AA49F06D7F2EF8627F0F /* Pods-thoughtworksInterviewUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = thoughtworksInterviewUITests/Info.plist;
@@ -483,6 +715,7 @@
 		};
 		0743638D1F149A0900F6F6CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 940FE2A0CE7AF643AFAA8BF7 /* Pods-thoughtworksInterviewUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = thoughtworksInterviewUITests/Info.plist;
@@ -513,6 +746,7 @@
 				074363871F149A0900F6F6CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		074363881F149A0900F6F6CB /* Build configuration list for PBXNativeTarget "thoughtworksInterviewTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +755,7 @@
 				0743638A1F149A0900F6F6CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0743638B1F149A0900F6F6CB /* Build configuration list for PBXNativeTarget "thoughtworksInterviewUITests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +764,7 @@
 				0743638D1F149A0900F6F6CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

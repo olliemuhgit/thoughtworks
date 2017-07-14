@@ -1,0 +1,6 @@
+framework module Pods_thoughtworksInterview {
+  umbrella header "Pods-thoughtworksInterview-umbrella.h"
+
+  export *
+  module * { export * }
+}
