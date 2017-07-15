@@ -19,9 +19,17 @@ class OllieDataProvider: NSObject, OllieServiceConsumerDelegate {
     }
     
     func haveJsonPayload(payload: Any, serviceCalled: String) {
-        //deal with it appropriately
+        if(serviceCalled == "categoryService"){
+            
+        }
         
-       //   if(serviceCalled == )
+        if(serviceCalled == "tagsService"){
+            
+        }
+        
+        if(serviceCalled == "songsService"){
+            
+        }
     }
     
     
