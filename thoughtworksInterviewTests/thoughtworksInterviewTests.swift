@@ -21,10 +21,25 @@ class thoughtworksInterviewTests: XCTestCase {
         super.tearDown()
     }
     
-    func testNetworks(){
+    func testInitialService(){
         let stringToTest = "http://totalmock.getsandbox.com/api/1/tags"
         
         
         XCTAssertEqual(OllieServiceConstants.getTagsUrl(), stringToTest)
     }
+    
+    func testCategoryService(){
+        let stringToTest = "http://totalmock.getsandbox.com/api/1/category/tag/2"
+        
+        XCTAssertEqual(OllieServiceConstants.getCategoryUrl(categoryID: 2), stringToTest)
+        XCTAssertNotEqual(OllieServiceConstants.getCategoryUrl(categoryID: 43), stringToTest)
+    }
+    
+    func testSongListURL(){
+        let stringToTest = "http://totalmock.getsandbox.com/api/1/songs/multi?ids=1,2,3,4,5"
+        
+        XCTAssertEqual(OllieServiceConstants.getSongListURL(songIDListAsString: "1,2,3,4,5"), stringToTest)
+        XCTAssertNotEqual(OllieServiceConstants.getSongListURL(songIDListAsString: "notGonnaDoIt"), stringToTest)
+    }
+
 }
