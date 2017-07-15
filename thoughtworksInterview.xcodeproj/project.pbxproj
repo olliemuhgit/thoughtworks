@@ -23,7 +23,6 @@
 		0743636B1F149A0900F6F6CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 074363691F149A0900F6F6CB /* LaunchScreen.storyboard */; };
 		074363761F149A0900F6F6CB /* thoughtworksInterviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074363751F149A0900F6F6CB /* thoughtworksInterviewTests.swift */; };
 		074363811F149A0900F6F6CB /* thoughtworksInterviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074363801F149A0900F6F6CB /* thoughtworksInterviewUITests.swift */; };
-		07A9D4CF1F194AAC008F15B5 /* DataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A9D4CE1F194AAC008F15B5 /* DataProviderTests.swift */; };
 		23E1BCBE29F00FD113AB74AD /* Pods_thoughtworksInterview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96A09798EB3C11657E0A396 /* Pods_thoughtworksInterview.framework */; };
 		2A61B7BD68714B323DB78D55 /* Pods_thoughtworksInterviewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBADFD62B090D22E9520B6E5 /* Pods_thoughtworksInterviewTests.framework */; };
 		D35B645BF2D159E29E28AD3D /* Pods_thoughtworksInterviewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06807E14FBCC5D27DE0FCABA /* Pods_thoughtworksInterviewUITests.framework */; };
@@ -70,7 +69,6 @@
 		0743637C1F149A0900F6F6CB /* thoughtworksInterviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = thoughtworksInterviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		074363801F149A0900F6F6CB /* thoughtworksInterviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thoughtworksInterviewUITests.swift; sourceTree = "<group>"; };
 		074363821F149A0900F6F6CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07A9D4CE1F194AAC008F15B5 /* DataProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProviderTests.swift; sourceTree = "<group>"; };
 		412C51930143180A40B219BA /* Pods-thoughtworksInterviewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thoughtworksInterviewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-thoughtworksInterviewTests/Pods-thoughtworksInterviewTests.release.xcconfig"; sourceTree = "<group>"; };
 		4CBA64DFAC4FEC1908098DF5 /* Pods-thoughtworksInterview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thoughtworksInterview.debug.xcconfig"; path = "Pods/Target Support Files/Pods-thoughtworksInterview/Pods-thoughtworksInterview.debug.xcconfig"; sourceTree = "<group>"; };
 		6747AA49F06D7F2EF8627F0F /* Pods-thoughtworksInterviewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thoughtworksInterviewUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-thoughtworksInterviewUITests/Pods-thoughtworksInterviewUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -166,7 +164,6 @@
 			children = (
 				074363751F149A0900F6F6CB /* thoughtworksInterviewTests.swift */,
 				074363771F149A0900F6F6CB /* Info.plist */,
-				07A9D4CE1F194AAC008F15B5 /* DataProviderTests.swift */,
 			);
 			path = thoughtworksInterviewTests;
 			sourceTree = "<group>";
@@ -502,7 +499,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07A9D4CF1F194AAC008F15B5 /* DataProviderTests.swift in Sources */,
 				074363761F149A0900F6F6CB /* thoughtworksInterviewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

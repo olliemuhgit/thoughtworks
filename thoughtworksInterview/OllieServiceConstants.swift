@@ -9,17 +9,17 @@
 import UIKit
 
 class OllieServiceConstants: NSObject {
-    let rootURL = "http://totalmock.getsandbox.com"
+    static let rootURL = "http://totalmock.getsandbox.com"
     
-    func getTagsUrl() -> String {
+    class func getTagsUrl() -> String {
         return rootURL+"/api/1/tags"
     }
     
-    func getCategoryUrl(categoryID : Int) -> String {
+    class func getCategoryUrl(categoryID : Int) -> String {
         return rootURL+"/api/1/category/tag/"+String(categoryID)
     }
     
-    func getSongListURL(songIDListAsString : String) -> String {
+    class func getSongListURL(songIDListAsString : String) -> String {
         return rootURL+"/api/1/songs/multi?ids="+songIDListAsString
     }
 }
