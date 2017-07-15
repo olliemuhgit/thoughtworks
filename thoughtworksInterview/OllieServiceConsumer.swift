@@ -11,26 +11,37 @@ import Alamofire
 
 class OllieServiceConsumer: NSObject {
     
+    var responseDelegate : OllieServiceConsumerDelegate!
+    
     func getTags(){
         let serviceURL = OllieServiceConstants.getTagsUrl()
         self.startServiceREquestProfessForService(serviceURL: serviceURL)
     }
     
+    func getNavigationType(categoryId : Int){
+        let serviceURL = OllieServiceConstants.getCategoryUrl(categoryID: categoryId)
+        self.startServiceREquestProfessForService(serviceURL: serviceURL)
+    }
+    
+    func getSongListByStringCollection(songIdList : String){
+        let serviceURL = OllieServiceConstants.getSongListURL(songIDListAsString: songIdList)
+        self.startServiceREquestProfessForService(serviceURL: serviceURL)
+        
+    }
     
     func startServiceREquestProfessForService(serviceURL : String){
     
+        let headers: HTTPHeaders = [
+            "Accept": "application/json",
+            "Content-Type" : "application/json"
+        ]
     
-        Alamofire.request(serviceURL).responseJSON { response in
-            print("Request: \(String(describing: response.request))")   // original url request
-            print("Response: \(String(describing: response.response))") // http url response
+        Alamofire.request(serviceURL, headers: headers).responseJSON { response in
             print("Result: \(response.result)")                         // response serialization result
             
             if let json = response.result.value {
+                self.responseDelegate.haveJsonPayload(payload: json, serviceCalled: serviceURL)
                 print("JSON: \(json)") // serialized json response
-            }
-            
-            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                print("Data: \(utf8Text)") // original server data as UTF8 string
             }
         }
     

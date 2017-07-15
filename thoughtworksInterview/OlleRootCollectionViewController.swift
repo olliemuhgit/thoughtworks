@@ -15,13 +15,15 @@ class OlleRootCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = "Browse By"
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
-        // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(getDataForView), name: NSNotification.Name(rawValue: OllieServiceConstants.getBoradCastString(serviceCalled: "tags")), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +31,10 @@ class OlleRootCollectionViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func getDataForView(){
+        
+    }
+    
     /*
     // MARK: - Navigation
 

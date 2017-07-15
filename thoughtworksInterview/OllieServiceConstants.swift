@@ -22,4 +22,22 @@ class OllieServiceConstants: NSObject {
     class func getSongListURL(songIDListAsString : String) -> String {
         return rootURL+"/api/1/songs/multi?ids="+songIDListAsString
     }
+    
+    class func getBoradCastString(serviceCalled : String) -> String{
+        var returnValue : String!
+        
+        if(serviceCalled == "songs"){
+            returnValue = "songsServiceAndView"
+        }
+        
+        if(serviceCalled == "categories"){
+            returnValue = "categoryAndView"
+        }
+        
+        if(serviceCalled == "tags"){
+            returnValue = "initialViewAndTags"
+        }
+        
+        return returnValue
+    }
 }
