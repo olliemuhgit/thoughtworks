@@ -12,11 +12,13 @@ private let reuseIdentifier = "categoryCell"
 
 class OllieCategoryCollectionViewController: UICollectionViewController {
 
+    var incomingCategoryID : String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
         

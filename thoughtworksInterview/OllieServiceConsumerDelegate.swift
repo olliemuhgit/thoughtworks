@@ -9,5 +9,5 @@
 import Foundation
 
 protocol OllieServiceConsumerDelegate {
-    func haveJsonPayload(payload : Any, serviceCalled : String)
+    func haveJsonPayload(payload : NSArray, serviceCalled : String)
 }

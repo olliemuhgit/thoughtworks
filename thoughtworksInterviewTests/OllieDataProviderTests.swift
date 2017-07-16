@@ -10,7 +10,7 @@ import XCTest
 @testable import thoughtworksInterview
 
 class OllieDataProviderTests: XCTestCase {
-    
+    let ollieDataProvider = OllieDataProvider()
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -41,10 +41,13 @@ class OllieDataProviderTests: XCTestCase {
         let songsPositivestring = "ihavesongsinmyface"
         let songsPositive = "songsService"
         let negativeString = "pqpqpqpqpqpqpq"
-        let ollieDataProvider = OllieDataProvider()
+        
         XCTAssertEqual(ollieDataProvider.whichServiceGotCalled(serviceURL: tagTestString), tagPositive)
         XCTAssertEqual(ollieDataProvider.whichServiceGotCalled(serviceURL: tagsServiceString), tagsPositive)
         XCTAssertEqual(ollieDataProvider.whichServiceGotCalled(serviceURL: songsPositivestring), songsPositive)
         XCTAssertNotEqual(ollieDataProvider.whichServiceGotCalled(serviceURL: negativeString), tagsPositive)
     }
+    
+    
+
 }

@@ -23,6 +23,10 @@
 		0743636B1F149A0900F6F6CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 074363691F149A0900F6F6CB /* LaunchScreen.storyboard */; };
 		074363761F149A0900F6F6CB /* thoughtworksInterviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074363751F149A0900F6F6CB /* thoughtworksInterviewTests.swift */; };
 		074363811F149A0900F6F6CB /* thoughtworksInterviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074363801F149A0900F6F6CB /* thoughtworksInterviewUITests.swift */; };
+		07BE87311F1B0743004EC707 /* OllieTagsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BE87301F1B0743004EC707 /* OllieTagsCollectionViewCell.swift */; };
+		07BE87341F1B0E86004EC707 /* TagsDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BE87331F1B0E86004EC707 /* TagsDataObject.swift */; };
+		07BE87361F1B1374004EC707 /* CategoriesDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BE87351F1B1374004EC707 /* CategoriesDataObject.swift */; };
+		07BE87381F1B1400004EC707 /* SongDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BE87371F1B1400004EC707 /* SongDataObject.swift */; };
 		23E1BCBE29F00FD113AB74AD /* Pods_thoughtworksInterview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96A09798EB3C11657E0A396 /* Pods_thoughtworksInterview.framework */; };
 		2A61B7BD68714B323DB78D55 /* Pods_thoughtworksInterviewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBADFD62B090D22E9520B6E5 /* Pods_thoughtworksInterviewTests.framework */; };
 		D35B645BF2D159E29E28AD3D /* Pods_thoughtworksInterviewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06807E14FBCC5D27DE0FCABA /* Pods_thoughtworksInterviewUITests.framework */; };
@@ -69,6 +73,10 @@
 		0743637C1F149A0900F6F6CB /* thoughtworksInterviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = thoughtworksInterviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		074363801F149A0900F6F6CB /* thoughtworksInterviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thoughtworksInterviewUITests.swift; sourceTree = "<group>"; };
 		074363821F149A0900F6F6CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07BE87301F1B0743004EC707 /* OllieTagsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OllieTagsCollectionViewCell.swift; sourceTree = "<group>"; };
+		07BE87331F1B0E86004EC707 /* TagsDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsDataObject.swift; sourceTree = "<group>"; };
+		07BE87351F1B1374004EC707 /* CategoriesDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesDataObject.swift; sourceTree = "<group>"; };
+		07BE87371F1B1400004EC707 /* SongDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongDataObject.swift; sourceTree = "<group>"; };
 		412C51930143180A40B219BA /* Pods-thoughtworksInterviewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thoughtworksInterviewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-thoughtworksInterviewTests/Pods-thoughtworksInterviewTests.release.xcconfig"; sourceTree = "<group>"; };
 		4CBA64DFAC4FEC1908098DF5 /* Pods-thoughtworksInterview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thoughtworksInterview.debug.xcconfig"; path = "Pods/Target Support Files/Pods-thoughtworksInterview/Pods-thoughtworksInterview.debug.xcconfig"; sourceTree = "<group>"; };
 		6747AA49F06D7F2EF8627F0F /* Pods-thoughtworksInterviewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thoughtworksInterviewUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-thoughtworksInterviewUITests/Pods-thoughtworksInterviewUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +118,7 @@
 		072884831F194C1D0052994A /* Connectivity */ = {
 			isa = PBXGroup;
 			children = (
+				07BE87321F1B0E6B004EC707 /* DataTypes */,
 				072884841F194F7E0052994A /* OllieServiceConsumer.swift */,
 				072884861F1950810052994A /* OllieServiceConstants.swift */,
 				072884881F1951980052994A /* OllieDataProvider.swift */,
@@ -150,6 +159,7 @@
 		0743635A1F149A0900F6F6CB /* thoughtworksInterview */ = {
 			isa = PBXGroup;
 			children = (
+				07BE872F1F1B0708004EC707 /* CellPrototypes */,
 				072884941F1AB4690052994A /* Delegates */,
 				072884831F194C1D0052994A /* Connectivity */,
 				0743635B1F149A0900F6F6CB /* AppDelegate.swift */,
@@ -183,6 +193,24 @@
 				074363821F149A0900F6F6CB /* Info.plist */,
 			);
 			path = thoughtworksInterviewUITests;
+			sourceTree = "<group>";
+		};
+		07BE872F1F1B0708004EC707 /* CellPrototypes */ = {
+			isa = PBXGroup;
+			children = (
+				07BE87301F1B0743004EC707 /* OllieTagsCollectionViewCell.swift */,
+			);
+			name = CellPrototypes;
+			sourceTree = "<group>";
+		};
+		07BE87321F1B0E6B004EC707 /* DataTypes */ = {
+			isa = PBXGroup;
+			children = (
+				07BE87331F1B0E86004EC707 /* TagsDataObject.swift */,
+				07BE87351F1B1374004EC707 /* CategoriesDataObject.swift */,
+				07BE87371F1B1400004EC707 /* SongDataObject.swift */,
+			);
+			name = DataTypes;
 			sourceTree = "<group>";
 		};
 		3478C1C59B121F4F6982FF61 /* Frameworks */ = {
@@ -495,8 +523,12 @@
 				0743635C1F149A0900F6F6CB /* AppDelegate.swift in Sources */,
 				0728848B1F1951FA0052994A /* OlleRootCollectionViewController.swift in Sources */,
 				0728848D1F19521E0052994A /* OllieCategoryCollectionViewController.swift in Sources */,
+				07BE87361F1B1374004EC707 /* CategoriesDataObject.swift in Sources */,
 				072884851F194F7E0052994A /* OllieServiceConsumer.swift in Sources */,
+				07BE87341F1B0E86004EC707 /* TagsDataObject.swift in Sources */,
+				07BE87311F1B0743004EC707 /* OllieTagsCollectionViewCell.swift in Sources */,
 				072884891F1951980052994A /* OllieDataProvider.swift in Sources */,
+				07BE87381F1B1400004EC707 /* SongDataObject.swift in Sources */,
 				0728848F1F1952510052994A /* OllieSongListTableViewController.swift in Sources */,
 				072884871F1950810052994A /* OllieServiceConstants.swift in Sources */,
 			);

@@ -12,18 +12,21 @@ private let reuseIdentifier = "tagCell"
 
 class OlleRootCollectionViewController: UICollectionViewController {
 
+    //set some empty containers for our data.
+    var tagsArray = [TagsDataObject]()//shit I may have messed this up
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = "Browse By"
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+       
+        //self.collectionView!.register(OllieTagsCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         NotificationCenter.default.addObserver(self, selector: #selector(getDataForView), name: NSNotification.Name(rawValue: OllieServiceConstants.getBoradCastString(serviceCalled: "tags")), object: nil)
+        let dataProvider = OllieDataProvider()
+        dataProvider.getTagsServiceData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,70 +34,111 @@ class OlleRootCollectionViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func getDataForView(){
+    func getDataForView(notificaton : NSNotification){
+        //populate our empty data sets
+        //reset this table
+        let  userInfo = notificaton.userInfo
+        tagsArray = userInfo!["tagsService"] as! [TagsDataObject]
         
+        DispatchQueue.main.async {
+            self.collectionView?.reloadData()
+        }
+        
+        performSelector(onMainThread: #selector(reloadDataFromBackgroundThread), with: nil, waitUntilDone: false)
     }
     
-    /*
+    func reloadDataFromBackgroundThread(){
+        self.collectionView?.reloadData()
+    }
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
+        let nextViewController = segue.destination as! OllieCategoryCollectionViewController
+        
+        let cell = sender as! OllieTagsCollectionViewCell
+        let cellRow = self.collectionView?.indexPath(for: cell)
+        let selectedTagObject = tagsArray[(cellRow?.row)!]
+        nextViewController.incomingCategoryID = selectedTagObject.id
     }
-    */
+    
 
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return tagsArray.count
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> OllieTagsCollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! OllieTagsCollectionViewCell
+        
+        let thisCellInfo = tagsArray[indexPath.row]
+        cell.typeLabel.text = thisCellInfo.title
     
-        // Configure the cell
-    
+        cell.iconView.image = UIImage(named: getImageNameForCellById(cellId: thisCellInfo.id))
+        
+        cell.layer.cornerRadius = 10
         return cell
     }
 
-    // MARK: UICollectionViewDelegate
 
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
+    func getImageNameForCellById(cellId : String) -> String {
+        var returnValue = ""
+        
+        if(cellId == "1"){
+            returnValue = "icons8-lorde"
+        }
+        
+        if(cellId == "2"){
+            returnValue = "icons8-music_record"
+        }
+        if(cellId == "3"){
+            returnValue = "icons8-singing_teacher"
+        }
+        
+        return returnValue
     }
-    */
 
+    // MARK: UICollectionViewDelegate
+    
+    /*
+     // Uncomment this method to specify if the specified item should be highlighted during tracking
+     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+     return true
+     }
+     */
+    
+    /*
+     // Uncomment this method to specify if the specified item should be selected
+     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+     return true
+     }
+     */
+    
+    /*
+     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
+     override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
+     return false
+     }
+     
+     override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+     return false
+     }
+     
+     override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
+     
+     }
+     */
 }

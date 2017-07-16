@@ -37,11 +37,10 @@ class OllieServiceConsumer: NSObject {
         ]
     
         Alamofire.request(serviceURL, headers: headers).responseJSON { response in
-            print("Result: \(response.result)")                         // response serialization result
-            
             if let json = response.result.value {
-                self.responseDelegate.haveJsonPayload(payload: json, serviceCalled: serviceURL)
-                print("JSON: \(json)") // serialized json response
+                if let responseAsArray = response.result.value as! NSArray?{
+                    self.responseDelegate.haveJsonPayload(payload: responseAsArray, serviceCalled: serviceURL)
+                }
             }
         }
     
