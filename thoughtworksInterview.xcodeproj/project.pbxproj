@@ -13,7 +13,6 @@
 		0728848B1F1951FA0052994A /* OlleRootCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728848A1F1951FA0052994A /* OlleRootCollectionViewController.swift */; };
 		0728848D1F19521E0052994A /* OllieCategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728848C1F19521E0052994A /* OllieCategoryCollectionViewController.swift */; };
 		0728848F1F1952510052994A /* OllieSongListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728848E1F1952510052994A /* OllieSongListTableViewController.swift */; };
-		072884911F1952640052994A /* OllieSongDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072884901F1952640052994A /* OllieSongDetailViewController.swift */; };
 		072884931F1AA3FF0052994A /* OllieDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072884921F1AA3FF0052994A /* OllieDataProviderTests.swift */; };
 		072884961F1AB48D0052994A /* OllieServiceConsumerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072884951F1AB48D0052994A /* OllieServiceConsumerDelegate.swift */; };
 		0743635C1F149A0900F6F6CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743635B1F149A0900F6F6CB /* AppDelegate.swift */; };
@@ -59,7 +58,6 @@
 		0728848A1F1951FA0052994A /* OlleRootCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OlleRootCollectionViewController.swift; sourceTree = "<group>"; };
 		0728848C1F19521E0052994A /* OllieCategoryCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OllieCategoryCollectionViewController.swift; sourceTree = "<group>"; };
 		0728848E1F1952510052994A /* OllieSongListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OllieSongListTableViewController.swift; sourceTree = "<group>"; };
-		072884901F1952640052994A /* OllieSongDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OllieSongDetailViewController.swift; sourceTree = "<group>"; };
 		072884921F1AA3FF0052994A /* OllieDataProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OllieDataProviderTests.swift; sourceTree = "<group>"; };
 		072884951F1AB48D0052994A /* OllieServiceConsumerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OllieServiceConsumerDelegate.swift; sourceTree = "<group>"; };
 		074363581F149A0900F6F6CB /* thoughtworksInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = thoughtworksInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,7 +173,6 @@
 				0728848A1F1951FA0052994A /* OlleRootCollectionViewController.swift */,
 				0728848C1F19521E0052994A /* OllieCategoryCollectionViewController.swift */,
 				0728848E1F1952510052994A /* OllieSongListTableViewController.swift */,
-				072884901F1952640052994A /* OllieSongDetailViewController.swift */,
 			);
 			path = thoughtworksInterview;
 			sourceTree = "<group>";
@@ -524,7 +521,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0743635F1F149A0900F6F6CB /* thoughtworksInterview.xcdatamodeld in Sources */,
-				072884911F1952640052994A /* OllieSongDetailViewController.swift in Sources */,
 				072884961F1AB48D0052994A /* OllieServiceConsumerDelegate.swift in Sources */,
 				0743635C1F149A0900F6F6CB /* AppDelegate.swift in Sources */,
 				0728848B1F1951FA0052994A /* OlleRootCollectionViewController.swift in Sources */,
