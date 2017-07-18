@@ -10,14 +10,21 @@ import UIKit
 
 class OllieSongListTableViewController: UITableViewController {
 
+    var incomingObject: CategoriesDataObject!
+    var songArray = [SongDataObject]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.title = incomingObject.name
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(getDataForView), name: NSNotification.Name(rawValue : OllieServiceConstants.getBoradCastString(serviceCalled: "songs")), object: nil)
+        
+        let dataProvider = OllieDataProvider()
+        
+        
+        dataProvider.getSongsData(songList: getSongListByString(songIds: incomingObject.song_ids))
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,27 +32,51 @@ class OllieSongListTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func getDataForView(notification : NSNotification) {
+        let userInfo = notification.userInfo
+        
+        songArray = userInfo!["songsService"] as! [SongDataObject]
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return songArray.count
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> OllieSongTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SongViewCell", for: indexPath) as! OllieSongTableViewCell
 
-        // Configure the cell...
+        let thisCellObject = songArray[indexPath.row]
+        
+        let blah = thisCellObject.coverUrl.trimmingCharacters(in: .whitespaces)
+        
+        debugPrint(blah)
+        let theImage = UIImage(named: blah)
+        
+        cell.albumImage.image = theImage
+        
+        cell.songNameLabel.text = thisCellObject.name
+        cell.songDescriptionLabel.text = thisCellObject.songDescription
 
         return cell
     }
-    */
+    
+    func getSongListByString(songIds : [Int]) -> String {
+        let newArray = songIds.map{"\($0)"}
+        return newArray.joined(separator: ",")
+    }
 
     /*
     // Override to support conditional editing of the table view.

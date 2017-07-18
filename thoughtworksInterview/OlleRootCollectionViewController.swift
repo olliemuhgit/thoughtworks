@@ -35,8 +35,6 @@ class OlleRootCollectionViewController: UICollectionViewController {
     }
 
     func getDataForView(notificaton : NSNotification){
-        //populate our empty data sets
-        //reset this table
         let  userInfo = notificaton.userInfo
         tagsArray = userInfo!["tagsService"] as! [TagsDataObject]
         
@@ -44,13 +42,8 @@ class OlleRootCollectionViewController: UICollectionViewController {
             self.collectionView?.reloadData()
         }
         
-        performSelector(onMainThread: #selector(reloadDataFromBackgroundThread), with: nil, waitUntilDone: false)
     }
-    
-    func reloadDataFromBackgroundThread(){
-        self.collectionView?.reloadData()
-    }
-    
+      
     
     // MARK: - Navigation
 
@@ -63,7 +56,7 @@ class OlleRootCollectionViewController: UICollectionViewController {
         let cell = sender as! OllieTagsCollectionViewCell
         let cellRow = self.collectionView?.indexPath(for: cell)
         let selectedTagObject = tagsArray[(cellRow?.row)!]
-        nextViewController.incomingCategoryID = selectedTagObject.id
+        nextViewController.incomingObject = selectedTagObject
     }
     
 

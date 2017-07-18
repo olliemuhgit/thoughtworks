@@ -21,7 +21,7 @@ class SongDataObject: NSObject {
         id = incomingValues["id"] as! Int
         name = incomingValues["name"] as! String
         type = incomingValues["type"] as! String
-        songDescription = incomingValues["songDescription"] as! String
-        coverUrl = incomingValues["coverUtl"] as! String
+        songDescription = incomingValues["description"] as! String
+        coverUrl = incomingValues["cover_url"] as! String
     }
 }

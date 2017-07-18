@@ -12,17 +12,18 @@ private let reuseIdentifier = "categoryCell"
 
 class OllieCategoryCollectionViewController: UICollectionViewController {
 
-    var incomingCategoryID : String!
+    var incomingObject : TagsDataObject!
+    var categoriesArray = [CategoriesDataObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Register cell classes
-//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
         
-       
+        self.title = incomingObject.title
+    
+        NotificationCenter.default.addObserver(self, selector: #selector(getDataForView), name: NSNotification.Name(rawValue: OllieServiceConstants.getBoradCastString(serviceCalled: "categories")), object: nil)
+       let dataProvider = OllieDataProvider()
+        dataProvider.getCategoriesData(categoryID: incomingObject.id)
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,37 +31,80 @@ class OllieCategoryCollectionViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    /*
+    func getDataForView(notification : NSNotification) {
+        let userInfo = notification.userInfo
+        
+        categoriesArray = userInfo!["categoryService"] as! [CategoriesDataObject]
+        
+        DispatchQueue.main.async {
+            self.collectionView?.reloadData()
+        }
+        
+        
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        let nextViewController = segue.destination as! OllieSongListTableViewController
+        
+        let selectedCell = sender as! OllieCategoryCollectionViewCell
+        let cellRow = self.collectionView?.indexPath(for: selectedCell)
+        let selectedCategory = categoriesArray[(cellRow?.row)!]
+        
+        nextViewController.incomingObject = selectedCategory
     }
-    */
+    
 
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return categoriesArray.count
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> OllieCategoryCollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! OllieCategoryCollectionViewCell
     
-        // Configure the cell
+        let thisCellInfo = categoriesArray[indexPath.row]
+        
+        cell.titleLabel.text = thisCellInfo.name
+        
+        cell.iconImage.image = UIImage(named: imageNameForCellById(cellData: thisCellInfo))
     
+        cell.layer.cornerRadius = 10
         return cell
     }
 
+    func imageNameForCellById(cellData : CategoriesDataObject) -> String {
+        var returnValue = ""
+        
+        if(cellData.id == "3"){
+            //get genre stuff
+            if(cellData.name == "Jazz"){
+                returnValue = "icons8-trumpet"
+            }
+            if(cellData.name == "Folk"){
+                returnValue = "icons8-guitar"
+            }
+            if(cellData.name == "Grunge"){
+                returnValue = "icons8-rock_music"
+            }
+        }else{
+            returnValue = "icons8-music_transcript"
+            
+        }
+        
+        return returnValue
+    }
+    
     // MARK: UICollectionViewDelegate
 
     /*

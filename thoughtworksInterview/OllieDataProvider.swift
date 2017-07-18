@@ -18,6 +18,17 @@ class OllieDataProvider: NSObject, OllieServiceConsumerDelegate {
         serviceConsumer.getTags()
     }
     
+    func getCategoriesData(categoryID : String){
+        serviceConsumer.responseDelegate = self
+        let categoryIDasInt = Int(categoryID)
+        serviceConsumer.getNavigationType(categoryId: categoryIDasInt!)
+    }
+    
+    func getSongsData(songList : String){
+        serviceConsumer.responseDelegate = self
+        serviceConsumer.getSongListByStringCollection(songIdList: songList)
+    }
+    
     func haveJsonPayload(payload: NSArray, serviceCalled: String) {
         var postingArray = [Any]()
         var serviceName = ""
