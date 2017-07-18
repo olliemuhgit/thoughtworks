@@ -60,10 +60,7 @@ class OllieSongListTableViewController: UITableViewController {
 
         let thisCellObject = songArray[indexPath.row]
         
-        let blah = thisCellObject.coverUrl.trimmingCharacters(in: .whitespaces)
-        
-        debugPrint(blah)
-        let theImage = UIImage(named: blah)
+        let theImage = UIImage(named: thisCellObject.coverUrl.trimmingCharacters(in: .whitespaces))
         
         cell.albumImage.image = theImage
         

@@ -36,12 +36,9 @@ class OllieServiceConsumer: NSObject {
             "Content-Type" : "application/json"
         ]
     
-        debugPrint(serviceURL)
         
         Alamofire.request(serviceURL, headers: headers).responseJSON { response in
             if let json = response.result.value {
-                //so if errors
-                debugPrint(json)
                 if let responseAsArray = response.result.value as! NSArray?{
                     self.responseDelegate.haveJsonPayload(payload: responseAsArray, serviceCalled: serviceURL)
                 }
