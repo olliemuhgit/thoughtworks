@@ -13,7 +13,7 @@ private let reuseIdentifier = "tagCell"
 class OlleRootCollectionViewController: UICollectionViewController {
 
     //set some empty containers for our data.
-    var tagsArray = [TagsDataObject]()//shit I may have messed this up
+    var tagsArray = [TagsDataObject]()
     
     
     override func viewDidLoad() {
@@ -21,8 +21,6 @@ class OlleRootCollectionViewController: UICollectionViewController {
 
         self.title = "Browse By"
         
-       
-        //self.collectionView!.register(OllieTagsCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         NotificationCenter.default.addObserver(self, selector: #selector(getDataForView), name: NSNotification.Name(rawValue: OllieServiceConstants.getBoradCastString(serviceCalled: "tags")), object: nil)
         let dataProvider = OllieDataProvider()
